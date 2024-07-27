@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:post_api_jpholder/home_page.dart';
 import 'package:post_api_jpholder/home_screen.dart';
 
 void main() {
@@ -15,12 +16,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-        appBarTheme: AppBarTheme(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: false,
+        appBarTheme: const AppBarTheme(
+          surfaceTintColor: Colors.white,
           backgroundColor: Colors.white,
           centerTitle: true,
-          elevation: 2,
+          elevation: 0.4,
           titleTextStyle: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -29,8 +31,9 @@ class MyApp extends StatelessWidget {
         ),
 
       ),
-      initialRoute: HomeScreen.routeName,
+      initialRoute: HomePage.routeName,
       routes: {
+        HomePage.routeName: (context) => const HomePage(),
         HomeScreen.routeName: (context) => const HomeScreen(),
       },
     );
