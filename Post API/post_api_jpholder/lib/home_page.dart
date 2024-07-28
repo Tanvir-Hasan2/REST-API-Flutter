@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:post_api_jpholder/get_api_without_model.dart';
 import 'package:post_api_jpholder/home_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,8 +21,10 @@ class _HomePageState extends State<HomePage> {
           children: [
             ElevatedButton(onPressed: (){
               Navigator.pushNamed(context, HomeScreen.routeName);
-            }, child: Text('Get API 1')),
-            ElevatedButton(onPressed: (){}, child: Text('POST API 1')),
+            }, child: Text('Get API 1 with model')),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, GetApiWithoutModel.routeName);
+            }, child: Text('Get API without Model')),
             ElevatedButton(onPressed: (){}, child: Text('Get API')),
             ElevatedButton(onPressed: (){}, child: Text('Get API')),
             ElevatedButton(onPressed: (){}, child: Text('Get API')),
