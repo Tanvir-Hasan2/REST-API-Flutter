@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 
 class HomeScreen extends StatefulWidget {
-  static const String routeName = '/getAPI1';
+  static const String routeName = '/getAPI1WithModel';
   const HomeScreen({super.key});
 
   @override

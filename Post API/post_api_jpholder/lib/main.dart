@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:post_api_jpholder/get_api_without_model.dart';
 import 'package:post_api_jpholder/home_page.dart';
 import 'package:post_api_jpholder/home_screen.dart';
 
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HomePage.routeName: (context) => const HomePage(),
         HomeScreen.routeName: (context) => const HomeScreen(),
+        GetApiWithoutModel.routeName: (context) => const GetApiWithoutModel(),
       },
     );
   }
