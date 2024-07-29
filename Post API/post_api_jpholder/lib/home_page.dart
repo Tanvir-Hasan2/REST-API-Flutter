@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:post_api_jpholder/complex_json_withmodel_get_api.dart';
 import 'package:post_api_jpholder/get_api_without_model.dart';
 import 'package:post_api_jpholder/home_screen.dart';
 
@@ -25,7 +26,9 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(onPressed: (){
               Navigator.pushNamed(context, GetApiWithoutModel.routeName);
             }, child: Text('Get API without Model')),
-            ElevatedButton(onPressed: (){}, child: Text('Get API')),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, ComplexJsonWithmodelGetApi.routeName);
+            }, child: Text('Complex Json withModel')),
             ElevatedButton(onPressed: (){}, child: Text('Get API')),
             ElevatedButton(onPressed: (){}, child: Text('Get API')),
           ],
