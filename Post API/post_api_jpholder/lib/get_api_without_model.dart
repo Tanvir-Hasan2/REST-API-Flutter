@@ -19,6 +19,7 @@ class _GetApiWithoutModelState extends State<GetApiWithoutModel> {
         .get(Uri.parse('https://jsonplaceholder.typicode.com/photos'));
     var data = jsonDecode(response.body.toString());
     if (response.statusCode == 200) {
+      photosList.clear();
       for (Map i in data) {
         Photos photos = Photos(
             title: i['title'],
@@ -53,23 +54,28 @@ class _GetApiWithoutModelState extends State<GetApiWithoutModel> {
                   return ListView.builder(
                       itemCount: photosList.length,
                       itemBuilder: (context,index){
-                        return ListTile(
-                          leading: CircleAvatar(
-                            backgroundImage: NetworkImage(snapshot.data![index].url.toString()),
-                          ),
-                          trailing: CircleAvatar(
-                            backgroundImage: NetworkImage(snapshot.data![index].thumbnailUrl.toString()),
-                          ),
-                          title: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Notes Id:'+snapshot.data![index].id.toString()),
-                              Text('AlbumID:'+snapshot.data![index].albumId.toString()),
-                            ],
-                          ),
-                          subtitle: Text(snapshot.data![index].title.toString()),
-                        );
+                        if(!snapshot.hasData){
+                          print('call');
+                          return Center(child: CircularProgressIndicator(color: Colors.blue,));
+                        }else{
+                          return ListTile(
+                            leading: CircleAvatar(
+                              backgroundImage: NetworkImage(snapshot.data![index].url.toString()),
+                            ),
+                            trailing: CircleAvatar(
+                              backgroundImage: NetworkImage(snapshot.data![index].thumbnailUrl.toString()),
+                            ),
+                            title: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Notes Id:'+snapshot.data![index].id.toString()),
+                                Text('AlbumID:'+snapshot.data![index].albumId.toString()),
+                              ],
+                            ),
+                            subtitle: Text(snapshot.data![index].title.toString()),
+                          );
+                        }
                       });
 
                 }

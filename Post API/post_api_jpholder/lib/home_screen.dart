@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     var data = jsonDecode(response.body.toString());
 
     if(response.statusCode == 200){
-      //postList.clear();//etar jonno hot restart korle o load hobe na abr
+      postList.clear();//etar jonno hot restart korle o load hobe na abr
      for(Map i in data){
        postList.add(PostsModel.fromJson(i));
      }
