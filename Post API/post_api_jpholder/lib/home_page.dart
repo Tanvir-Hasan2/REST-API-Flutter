@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:post_api_jpholder/complex_json_withmodel_get_api.dart';
-import 'package:post_api_jpholder/get_api_without_model.dart';
-import 'package:post_api_jpholder/home_screen.dart';
+import 'package:post_api_jpholder/hex_color.dart';
+import 'package:post_api_jpholder/Get%20API/home_screen.dart';
+
+import 'Get API/complex_json_withmodel_get_api.dart';
+import 'Get API/complex_json_without_model.dart';
+import 'Get API/get_api_without_model.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName = '/';
@@ -29,6 +32,14 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(onPressed: (){
               Navigator.pushNamed(context, ComplexJsonWithmodelGetApi.routeName);
             }, child: Text('Complex Json withModel')),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, HexColor.routeName);
+            }, child: Text('Hex Color')),
+            ElevatedButton(onPressed: (){
+              Navigator.pushNamed(context, ComplexJsonWithoutModel.routeName);
+            }, child: Text('Complex Json withOutModel')),
+            ElevatedButton(onPressed: (){}, child: Text('Get API')),
+            ElevatedButton(onPressed: (){}, child: Text('Get API')),
             ElevatedButton(onPressed: (){}, child: Text('Get API')),
             ElevatedButton(onPressed: (){}, child: Text('Get API')),
           ],
