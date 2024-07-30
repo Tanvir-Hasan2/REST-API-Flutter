@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:post_api_jpholder/complex_json_withmodel_get_api.dart';
-import 'package:post_api_jpholder/get_api_without_model.dart';
+import 'package:post_api_jpholder/Get%20API/get_api_without_model.dart';
 import 'package:post_api_jpholder/home_page.dart';
-import 'package:post_api_jpholder/home_screen.dart';
+import 'package:post_api_jpholder/Get%20API/home_screen.dart';
+
+import 'Get API/complex_json_withmodel_get_api.dart';
+import 'Get API/complex_json_without_model.dart';
+import 'hex_color.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +43,8 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (context) => const HomeScreen(),
         GetApiWithoutModel.routeName: (context) => const GetApiWithoutModel(),
         ComplexJsonWithmodelGetApi.routeName: (context) => const ComplexJsonWithmodelGetApi(),
+        HexColor.routeName: (context) => HexColor(),
+        ComplexJsonWithoutModel.routeName: (context) => const ComplexJsonWithoutModel(),
       },
     );
   }
