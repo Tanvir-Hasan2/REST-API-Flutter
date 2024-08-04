@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:post_api_jpholder/Get%20API/get_api_more_complex_product.dart';
 import 'package:post_api_jpholder/Get%20API/get_api_without_model.dart';
 import 'package:post_api_jpholder/home_page.dart';
 import 'package:post_api_jpholder/Get%20API/home_screen.dart';
+import 'package:post_api_jpholder/post/login_signup_with_rest_api.dart';
 
 import 'Get API/complex_json_withmodel_get_api.dart';
 import 'Get API/complex_json_without_model.dart';
@@ -45,6 +47,8 @@ class MyApp extends StatelessWidget {
         ComplexJsonWithmodelGetApi.routeName: (context) => const ComplexJsonWithmodelGetApi(),
         HexColor.routeName: (context) => HexColor(),
         ComplexJsonWithoutModel.routeName: (context) => const ComplexJsonWithoutModel(),
+        GetApiMoreComplexProduct.routeName: (context) => const GetApiMoreComplexProduct(),
+        LoginSignupWithRestApi.routeName: (context) => const LoginSignupWithRestApi(),
       },
     );
   }
