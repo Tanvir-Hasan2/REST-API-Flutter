@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:covid_19_tracker/services/state_services.dart';
 import 'package:covid_19_tracker/view/details_screen.dart';
 import 'package:flutter/cupertino.dart';

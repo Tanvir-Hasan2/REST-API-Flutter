@@ -1,4 +1,4 @@
-import 'package:covid_19_tracker/model/WorldStatesModel.dart';
+import 'package:covid_19_tracker/model/world_states_model.dart';
 import 'package:covid_19_tracker/services/state_services.dart';
 import 'package:covid_19_tracker/view/countries_list.dart';
 import 'package:flutter/material.dart';

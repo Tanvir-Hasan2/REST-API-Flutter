@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import '../model/WorldStatesModel.dart';
+import '../model/world_states_model.dart';
 import 'utils/app_urls.dart';
 
 class StateServices{
